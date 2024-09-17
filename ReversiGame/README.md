@@ -1,4 +1,4 @@
-# 2022WS_team2A
+# ReversiGame
 
 ## Introduction
 This project is an implementation of the classic game Reversi in C++. This repository contains the source code and other files necessary to build the program.
