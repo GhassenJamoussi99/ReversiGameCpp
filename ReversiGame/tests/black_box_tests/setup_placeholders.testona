@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TestonaObject id="c0">
+    <!--Created by TESTONA 6.9.0-->
+    <Tree id="c1" name="setup_placeholders" root="c2">
+        <Composition height="23" id="c2" name="Setup placeholder rules" style="background-color:#FFFFFF; color:#000000; font-size:9px; font-family:'Segoe UI'; text-align:Center; transform:none" width="148" x="284" y="16">
+            <Composition height="21" id="c66" name="IN" width="40" x="179" y="78">
+                <Classification height="20" id="c76" name="Player Piece" width="82" x="57" y="131">
+                    <Class height="20" id="c129" name="B" style="background-color:#FFFFFE" width="40" x="19" y="183">
+                        <Tag id="c835" type="Code">
+                            <Content key="textcontent" value="'B'"/>
+                        </Tag>
+                    </Class>
+                    <Class height="20" id="c135" name="W" style="background-color:#FFFFFE" width="40" x="75" y="183">
+                        <Tag id="c836" type="Code">
+                            <Content key="textcontent" value="'W'"/>
+                        </Tag>
+                    </Class>
+                    <Class height="20" id="c141" name="Other" style="background-color:#FFFFFE" width="47" x="131" y="183">
+                        <Tag id="c837" type="Code">
+                            <Content key="textcontent" value="'X'"/>
+                        </Tag>
+                    </Class>
+                    <Tag id="c834" type="Code">
+                        <Content key="textcontent" value="       //set playerPiece&#13;&#10;       char playerPiece = %CLASS%;&#13;&#10;&#13;&#10;"/>
+                    </Tag>
+                </Classification>
+                <Classification height="20" id="c80" name="Reversi Board" width="90" x="239" y="133">
+                    <Class height="20" id="c147" name="valid" style="background-color:#FFFFFE" width="42" x="194" y="183">
+                        <Tag id="c282" type="Description">
+                            <Content key="textcontent" value="Pieces are placed. &#13;&#10;Placeholders can be set as well"/>
+                        </Tag>
+                        <Tag id="c839" type="Code">
+                            <Content key="textcontent" value="&amp;validBoard"/>
+                        </Tag>
+                    </Class>
+                    <Class height="20" id="c153" name="empty" style="background-color:#FFFFFE" width="50" x="252" y="183">
+                        <Tag id="c287" type="Description">
+                            <Content key="textcontent" value="No pieces are placed"/>
+                        </Tag>
+                        <Tag id="c840" type="Code">
+                            <Content key="textcontent" value="&amp;emptyBoard"/>
+                        </Tag>
+                    </Class>
+                    <Class height="20" id="c851" name="invalid" width="52" x="320" y="183">
+                        <Tag id="c852" type="Code">
+                            <Content key="textcontent" value="NULL"/>
+                        </Tag>
+                        <Tag id="c854" type="Description">
+                            <Content key="textcontent" value="Means nullptr"/>
+                        </Tag>
+                    </Class>
+                    <Tag id="c838" type="Code">
+                        <Content key="textcontent" value="       //set reversibaord&#13;&#10;       ReversiBoard *reversiboard = %CLASS%;&#13;&#10;&#13;&#10;"/>
+                    </Tag>
+                </Classification>
+                <Tag id="c338" type="Coloring">
+                    <Content key="color" value="10011046"/>
+                    <Content key="alpha" value="180"/>
+                </Tag>
+            </Composition>
+            <Composition height="21" id="c69" name="OUT" style="background-color:#FFFFFF00" width="46" x="484" y="78">
+                <Classification height="20" id="c163" name="Execution status" style="background-color:#FFFFFF" width="105" x="398" y="141">
+                    <Class height="20" id="c226" name="Error" style="background-color:#FFFFFE" width="42" x="394" y="191">
+                        <Tag id="c846" type="Code">
+                            <Content key="textcontent" value="false"/>
+                        </Tag>
+                    </Class>
+                    <Class height="20" id="c220" name="Successful" style="background-color:#FFFFFE" width="71" x="451" y="191">
+                        <Tag id="c845" type="Code">
+                            <Content key="textcontent" value="true"/>
+                        </Tag>
+                    </Class>
+                    <Tag id="c844" type="Code">
+                        <Content key="textcontent" value="       //check whether the code exits due to invalid input&#13;&#10;       bool execStatus = %CLASS%;&#13;&#10;       if (false == execStatus) {&#13;&#10;            EXPECT_EXIT(placeholder_uut-&gt;setupPlaceholderRules(playerPiece, reversiboard), ::testing::ExitedWithCode(1),&quot;&quot;);&#13;&#10;       } else {&#13;&#10;            placeholder_uut-&gt;setupPlaceholderRules(playerPiece, reversiboard);&#13;&#10;       }&#13;&#10;"/>
+                    </Tag>
+                </Classification>
+                <Classification height="20" id="c159" name="Placeholder" style="background-color:#FFFFFF" width="81" x="548" y="142">
+                    <Class height="20" id="c208" name="Set" style="background-color:#FFFFFE" width="40" x="542" y="191">
+                        <Tag id="c842" type="Code">
+                            <Content key="textcontent" value="true"/>
+                        </Tag>
+                    </Class>
+                    <Class height="20" id="c214" name="Not set" style="background-color:#FFFFFE" width="55" x="604" y="190">
+                        <Tag id="c843" type="Code">
+                            <Content key="textcontent" value="false"/>
+                        </Tag>
+                    </Class>
+                    <Tag id="c841" type="Code">
+                        <Content key="textcontent" value="       &#13;&#10;       //check whether a placeholder is set&#13;&#10;       bool isPlaceholderSet = false;&#13;&#10;       if (NULL != reversiboard){&#10;            for(int i = 0; i &lt; 8; i++){&#10;                for(int j = 0; j &lt; 8; j++){&#10;                    if ('+' == reversiboard-&gt;getBoardCell(i,j)){&#10;                        isPlaceholderSet = true;&#10;                        break;&#10;                    }&#10;                }&#10;            }&#10;       }&#13;&#10;&#13;&#10;       EXPECT_EQ(isPlaceholderSet, %CLASS%);&#13;&#10;"/>
+                    </Tag>
+                </Classification>
+                <Tag id="c339" type="Coloring">
+                    <Content key="color" value="12560536"/>
+                    <Content key="alpha" value="180"/>
+                </Tag>
+            </Composition>
+        </Composition>
+        <Tag id="c847" type="GlobalPre">
+            <Content key="textcontent" value="//This file is generated  by TESTONA&#13;&#10;#include &quot;placeholder_test.h&quot;&#13;&#10;&#10;&#10;TEST_F(PlaceholderTest, setupPlaceholderRules) {&#13;&#10;&#10;"/>
+        </Tag>
+        <Tag id="c848" type="GlobalPost">
+            <Content key="textcontent" value="&#13;&#10;}&#13;&#10;&#13;&#10;"/>
+        </Tag>
+        <Tag id="c849" type="EachPre">
+            <Content key="textcontent" value="    //%TEST%&#13;&#10;    {&#13;&#10;"/>
+        </Tag>
+        <Tag id="c850" type="EachPost">
+            <Content key="textcontent" value="    &#13;&#10;    }&#13;&#10;&#13;&#10;&#13;&#10;"/>
+        </Tag>
+    </Tree>
+    <TestGroup id="c3" name="" validity="invalid">
+        <TestCase id="c1227" name="Manual Testcase 1" validity="invalid">
+            <Marks true="c129 c851 c226 c214 "/>
+        </TestCase>
+        <TestCase id="c1236" name="Manual Testcase 2" validity="invalid">
+            <Marks true="c141 c147 c226 c214 "/>
+        </TestCase>
+        <TestGroup id="c1459" name="Pairwise Combination" validity="valid">
+            <TestCase id="c1460" name="Pairwise Combination Testcase 1" validity="valid">
+                <Marks true="c135 c153 c214 c220 "/>
+            </TestCase>
+            <TestCase id="c1469" name="Pairwise Combination Testcase 2" validity="valid">
+                <Marks true="c129 c147 c208 c220 "/>
+            </TestCase>
+            <TestCase id="c1478" name="Pairwise Combination Testcase 3" validity="valid">
+                <Marks true="c129 c153 c214 c220 "/>
+            </TestCase>
+            <TestCase id="c1487" name="Pairwise Combination Testcase 4" validity="valid">
+                <Marks true="c135 c147 c208 c220 "/>
+            </TestCase>
+        </TestGroup>
+    </TestGroup>
+    <Tag id="c227" type="TagManager">
+        <Content key="GlobalPre" value="com.berner_mattner.testona.impl.tags.TextualTag:111111121"/>
+        <Content key="GlobalPost" value="com.berner_mattner.testona.impl.tags.TextualTag:111111121"/>
+        <Content key="EachPre" value="com.berner_mattner.testona.impl.tags.TextualTag:111111121"/>
+        <Content key="Code" value="com.berner_mattner.testona.impl.tags.TextualTag:112211111"/>
+        <Content key="EachPost" value="com.berner_mattner.testona.impl.tags.TextualTag:111111121"/>
+    </Tag>
+    <Tag id="c326" type="TestcaseGeneratorClassic">
+        <Content key="Pairwise Combination" value="pairwise(76,80,159,163);"/>
+    </Tag>
+    <Tag id="c334" type="DependencyManagerClassic">
+        <Content key="error rule" value="1;226 &lt;=&gt; 141 OR 851;"/>
+        <Content key="placeholder not set rule 2" value="1;226  =&gt; 214;"/>
+        <Content key="placeholder not set rule 1" value="1;214 &lt;=&gt; (129 OR 135) AND 153;"/>
+    </Tag>
+</TestonaObject>

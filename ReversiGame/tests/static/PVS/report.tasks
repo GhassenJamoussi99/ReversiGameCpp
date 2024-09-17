@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <title>Messages</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+    td {
+      padding: 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    legend {
+      color: blue;
+      font: 1.2em bold Comic Sans MS Verdana;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table style="width: 100%; font: 12pt normal Century Gothic;">
+    <caption style="font-weight: bold;background: #fff;color: #000;border: none !important;">MESSAGES</caption>
+    <tr style="background: black; color: white;">
+      <th style="width: 30%;">Location</th>
+      <th style="width: 5%;">Code</th>
+      <th style="width: 65%;">Message</th>
+    </tr>
+    <tr style='background: lightcyan;'>
+      <td colspan='5' style='color: red; text-align: center; font-size: 1.2em;'>Fails/Info</td>
+    </tr>
+    <tr>
+      <td style='width: 30%;'><div title=" ">  (1)</div></td>
+      <td style='width: 5%;'><a target="_blank" href='https://pvs-studio.com/en/renewal/'>Renew</a></td>
+      <td style='width: 65%;'>Your license will expire in 7 days. Click 'Renew' to learn more or contact us at support@viva64.com.</td>
+    </tr>
+    <tr style='background: lightcyan;'>
+      <td colspan='5' style='color: red; text-align: center; font-size: 1.2em;'>General Analysis (GA)</td>
+    </tr>
+    <tr>
+      <td style='width: 30%;'><div title="/home/omar/Desktop/Reversi game/ReversiTeam/2022ws_team2a/ReversiGame/include/player.h">player.h (9)</div></td>
+      <td style='width: 5%;'><a target="_blank" href='https://pvs-studio.com/en/docs/warnings/v730/'>V730</a></td>
+      <td style='width: 65%;'>Not all members of a class are initialized inside the constructor. Consider inspecting: userColor, computerColor.</td>
+    </tr>
+    <tr>
+      <td style='width: 30%;'><div title="/home/omar/Desktop/Reversi game/ReversiTeam/2022ws_team2a/ReversiGame/src/reversiboard.cpp">reversiboard.cpp (20)</div></td>
+      <td style='width: 5%;'><a target="_blank" href='https://pvs-studio.com/en/docs/warnings/v730/'>V730</a></td>
+      <td style='width: 65%;'>Not all members of a class are initialized inside the constructor. Consider inspecting: board.</td>
+    </tr>
+    <tr>
+      <td style='width: 30%;'><div title="/home/omar/Desktop/Reversi game/ReversiTeam/2022ws_team2a/ReversiGame/src/reversigame.cpp">reversigame.cpp (98)</div></td>
+      <td style='width: 5%;'><a target="_blank" href='https://pvs-studio.com/en/docs/warnings/v547/'>V547</a></td>
+      <td style='width: 65%;'>Expression 'doubleCheck == true' is always true.</td>
+    </tr>
+    <tr>
+      <td style='width: 30%;'><div title="/home/omar/Desktop/Reversi game/ReversiTeam/2022ws_team2a/ReversiGame/src/reversigame.cpp">reversigame.cpp (13)</div></td>
+      <td style='width: 5%;'><a target="_blank" href='https://pvs-studio.com/en/docs/warnings/v730/'>V730</a></td>
+      <td style='width: 65%;'>Not all members of a class are initialized inside the constructor. Consider inspecting: userTurn.</td>
+    </tr>
+  </table>
+</body>
+</html>

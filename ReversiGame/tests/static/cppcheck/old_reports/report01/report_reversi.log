@@ -1,0 +1,63 @@
+[1minclude/player.h:9:9: [31mwarning:[39m Member variable 'Player::userColor' is not initialized in the constructor. [uninitMemberVar][0m
+        Player(){};
+        ^
+[1minclude/player.h:9:9: [31mwarning:[39m Member variable 'Player::computerColor' is not initialized in the constructor. [uninitMemberVar][0m
+        Player(){};
+        ^
+[1mexternal/log.h:34:5: [31mstyle:[39m Class 'LOG' has a constructor with 1 argument that is not explicit. [noExplicitConstructor][0m
+    LOG(typelog type) {
+    ^
+[1minclude/computer.h:16:10: [31mstyle:[39m The function 'move' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride][0m
+    void move();
+         ^
+[1minclude/player.h:20:22: [2mnote:[0m Virtual function in base class
+        virtual void move(){}; //for user and computer
+                     ^
+[1minclude/computer.h:16:10: [2mnote:[0m Function in derived class
+    void move();
+         ^
+[1msrc/computer.cpp:41:10: [31mstyle:[39m The scope of the variable 'corner_available' can be reduced. [variableScope][0m
+    bool corner_available = false;
+         ^
+[1msrc/menu.cpp:15:2: [31mwarning:[39m Class 'Menu' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor][0m
+ files = new FileManager();
+ ^
+[1msrc/menu.cpp:15:2: [31mwarning:[39m Class 'Menu' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq][0m
+ files = new FileManager();
+ ^
+[1msrc/reversiboard.cpp:20:15: [31mwarning:[39m Member variable 'ReversiBoard::board' is not initialized in the constructor. [uninitMemberVar][0m
+ReversiBoard::ReversiBoard(){
+              ^
+[1msrc/reversiboard.cpp:21:5: [31mwarning:[39m Class 'ReversiBoard' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor][0m
+    placeholder = new Placeholder();
+    ^
+[1msrc/reversiboard.cpp:21:5: [31mwarning:[39m Class 'ReversiBoard' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq][0m
+    placeholder = new Placeholder();
+    ^
+[1minclude/user.h:10:10: [31mstyle:[39m The function 'move' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride][0m
+    void move();
+         ^
+[1minclude/player.h:20:22: [2mnote:[0m Virtual function in base class
+        virtual void move(){}; //for user and computer
+                     ^
+[1minclude/user.h:10:10: [2mnote:[0m Function in derived class
+    void move();
+         ^
+[1msrc/reversigame.cpp:13:14: [31mwarning:[39m Member variable 'ReversiGame::userTurn' is not initialized in the constructor. [uninitMemberVar][0m
+ReversiGame::ReversiGame(){
+             ^
+[1msrc/reversigame.cpp:13:14: [31mwarning:[39m Member variable 'ReversiGame::menu' is not initialized in the constructor. [uninitMemberVar][0m
+ReversiGame::ReversiGame(){
+             ^
+[1msrc/reversigame.cpp:16:5: [31mwarning:[39m Class 'ReversiGame' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor][0m
+    reversiboard = new ReversiBoard();
+    ^
+[1msrc/reversigame.cpp:16:5: [31mwarning:[39m Class 'ReversiGame' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq][0m
+    reversiboard = new ReversiBoard();
+    ^
+[1msrc/reversigame.cpp:149:0: [31mstyle:[39m The function 'checkCommands' is never used. [unusedFunction][0m
+
+^
+[1msrc/user.cpp:17:0: [31mstyle:[39m The function 'chooseColor' is never used. [unusedFunction][0m
+
+^
