@@ -1,4 +1,4 @@
-# 2022WS_team2A
+# Reversi Game in C++
 
 ## Introduction
 This repository contains various documents and files related to the Reversi game. It includes class diagrams, requirements, ReversiGame, traceability tables, and use cases. Each folder contains information related to a different aspect of the game.
